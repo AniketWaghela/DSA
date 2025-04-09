@@ -1,15 +1,14 @@
 class Solution {
     public int minOperations(int[] nums, int k) {
-        HashMap<Integer , Integer> map = new HashMap<>();
+        boolean[] map = new boolean[101];
 
         int count=0;
         for(int i=0;i<nums.length;i++){
             if(nums[i] < k) return -1;
-            if( nums[i] > k && !map.containsKey(nums[i]) ) count++;
-            map.put( nums[i] , map.getOrDefault(nums[i],0)+1 );
+            if( nums[i] > k && !map[nums[i]] ) count++;
+            map[nums[i]]=true;
         }
 
-        System.out.println(map);
         return count;
     }
 }
