@@ -8,8 +8,7 @@ class Solution {
         sb.append(s.charAt(0));
         sb.append(s.charAt(1));
         for(int i=2;i< n ;i++){
-            if( s.charAt(i) == s.charAt(i-1) && s.charAt(i-1) == s.charAt(i-2) ) continue;
-            else sb.append(s.charAt(i));
+            if( s.charAt(i) != s.charAt(i-1) || s.charAt(i-1) != s.charAt(i-2) ) sb.append(s.charAt(i));;
         }
 
         return sb.toString();
