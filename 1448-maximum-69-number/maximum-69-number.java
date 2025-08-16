@@ -9,8 +9,7 @@ class Solution {
             n/=10;
             i++;
         }
-        // System.out.println(index+" "+i);
 
-        return index == -1 ? num : num+ 3* (int)Math.pow(10,index) ;
+        return index >=0 ?  num+ 3* (int)Math.pow(10,index) : num ;
     }
 }
