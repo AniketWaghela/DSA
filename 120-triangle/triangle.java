@@ -9,7 +9,7 @@ class Solution {
                 int right = triangle.get(i+1).get(j+1);
                 triangle.get(i).set(j , Math.min( curr+right , curr+left ) );
             }
-            System.out.println();
+            // System.out.println();
         }
 
         return triangle.get(0).get(0);
