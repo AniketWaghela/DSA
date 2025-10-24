@@ -7,11 +7,11 @@ FROM
     (
         SELECT 
             Person_name,
-            -- Turn,
+            Turn,
             SUM(weight) OVER(ORDER BY Turn) AS cum
         FROM
             Queue) AS temp
 WHERE 
     cum <= 1000
 ORDER BY 
-    cum DESC LIMIT 1
+    Turn DESC LIMIT 1
